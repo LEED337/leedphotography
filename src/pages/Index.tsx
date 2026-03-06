@@ -42,7 +42,7 @@ const Index = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
-            className="mt-2 font-display text-xs text-muted-foreground tracking-[0.3em] uppercase"
+            className="mt-2 font-display text-xs text-foreground/60 tracking-[0.3em] uppercase"
           >
             — Cesare Pavese
           </motion.p>
