@@ -34,7 +34,7 @@ const Index = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="mt-8 font-body text-lg md:text-xl text-muted-foreground tracking-wide max-w-md italic"
+            className="mt-8 font-body text-lg md:text-xl text-foreground/80 tracking-wide max-w-md italic"
           >
             "We do not remember days, we remember moments."
           </motion.p>
@@ -42,7 +42,7 @@ const Index = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
-            className="mt-2 font-display text-xs text-muted-foreground tracking-[0.3em] uppercase"
+            className="mt-2 font-display text-xs text-foreground/60 tracking-[0.3em] uppercase"
           >
             — Cesare Pavese
           </motion.p>
