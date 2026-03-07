@@ -11,7 +11,7 @@ const Index = () => {
       <section className="relative h-screen overflow-hidden grain-overlay">
         <div className="absolute inset-0">
           <img
-            src="https://leedphotography.com/wp-content/uploads/2025/01/WithSky-1024x683.jpg"
+            src={heroBg}
             alt="Leed Photography landscape"
             className="w-full h-full object-cover"
           />
