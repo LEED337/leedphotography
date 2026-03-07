@@ -102,7 +102,7 @@ const Index = () => {
 
             <Link to="/video" className="group relative aspect-[4/3] overflow-hidden">
               <img
-                src="https://leedphotography.com/wp-content/uploads/2025/01/DSC02801-1024x683.jpg"
+                src="/images/DSC02801-1024x683.jpg"
                 alt="Video production"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
