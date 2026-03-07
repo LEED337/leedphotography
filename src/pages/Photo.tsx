@@ -4,27 +4,27 @@ import PageTransition from "@/components/PageTransition";
 import Lightbox from "@/components/Lightbox";
 
 const portraits = [
-  "https://leedphotography.com/wp-content/uploads/2025/01/untitled-01103-scaled.jpg",
-  "https://leedphotography.com/wp-content/uploads/2025/01/DSC03445-scaled.webp",
-  "https://leedphotography.com/wp-content/uploads/2025/01/DSC09586-scaled.jpg",
-  "https://leedphotography.com/wp-content/uploads/2025/01/DSC05693-scaled.jpg",
-  "https://leedphotography.com/wp-content/uploads/2025/01/DSC05624-scaled.webp",
-  "https://leedphotography.com/wp-content/uploads/2025/01/DSC07110-scaled.jpg",
-  "https://leedphotography.com/wp-content/uploads/2025/01/DSC04385-scaled.webp",
-  "https://leedphotography.com/wp-content/uploads/2025/01/DSC03306-scaled.webp",
-  "https://leedphotography.com/wp-content/uploads/2025/01/DSC09633-scaled.jpg",
-  "https://leedphotography.com/wp-content/uploads/2025/01/DSC07056-scaled.jpg",
+  "/images/untitled-01103-scaled.jpg",
+  "/images/DSC03445-scaled.webp",
+  "/images/DSC09586-scaled.jpg",
+  "/images/DSC05693-scaled.jpg",
+  "/images/DSC05624-scaled.webp",
+  "/images/DSC07110-scaled.jpg",
+  "/images/DSC04385-scaled.webp",
+  "/images/DSC03306-scaled.webp",
+  "/images/DSC09633-scaled.jpg",
+  "/images/DSC07056-scaled.jpg",
 ];
 
 const landscapes = [
-  "https://leedphotography.com/wp-content/uploads/2025/01/WithSky.jpg",
-  "https://leedphotography.com/wp-content/uploads/2025/01/DSC03970-1-scaled.jpg",
-  "https://leedphotography.com/wp-content/uploads/2025/01/DSC03148.jpg",
-  "https://leedphotography.com/wp-content/uploads/2025/01/DSC05761.jpg",
-  "https://leedphotography.com/wp-content/uploads/2025/01/DSC06835-scaled.webp",
-  "https://leedphotography.com/wp-content/uploads/2025/01/ArnarstapiCottage-scaled.webp",
-  "https://leedphotography.com/wp-content/uploads/2025/01/DSC03021-scaled.webp",
-  "https://leedphotography.com/wp-content/uploads/2025/01/DSC04222-scaled.webp",
+  "/images/WithSky.jpg",
+  "/images/DSC03970-1-scaled.jpg",
+  "/images/DSC03148.jpg",
+  "/images/DSC05761.jpg",
+  "/images/DSC06835-scaled.jpg",
+  "/images/ArnarstapiCottage-scaled.webp",
+  "/images/DSC03021-scaled.webp",
+  "/images/DSC04222-scaled.webp",
 ];
 
 const allImages = [...portraits, ...landscapes];
