@@ -31,6 +31,12 @@ const allImages = [...portraits, ...landscapes];
 
 type Category = "all" | "portrait" | "landscape";
 
+const categoryLabels: Record<Category, string> = {
+  all: "All Photography",
+  portrait: "Portraits & Headshots",
+  landscape: "Landscapes",
+};
+
 const Photo = () => {
   const [category, setCategory] = useState<Category>("all");
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -44,6 +50,13 @@ const Photo = () => {
     setLightboxOpen(true);
   };
 
+  const getAltText = (src: string, i: number) => {
+    if (portraits.includes(src)) {
+      return `Professional portrait and headshot photography in Utah by Leed Photography - image ${i + 1}`;
+    }
+    return `Utah landscape photography by Leed Photography - image ${i + 1}`;
+  };
+
   return (
     <PageTransition>
       <section className="pt-32 pb-24 px-6 md:px-12 min-h-screen">
@@ -53,8 +66,16 @@ const Photo = () => {
             animate={{ opacity: 1, y: 0 }}
             className="font-display text-4xl md:text-6xl font-light text-foreground mb-4"
           >
-            Photo
+            Photography Portfolio
           </motion.h1>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="font-body text-muted-foreground mb-4 max-w-2xl"
+          >
+            Professional photography in Utah — from wedding and family portraits to stunning landscape photography. Available for sessions across Salt Lake City, Provo, Park City, and beyond.
+          </motion.p>
           <motion.div
             initial={{ width: 0 }}
             animate={{ width: "3rem" }}
@@ -97,7 +118,7 @@ const Photo = () => {
               >
                 <img
                   src={src}
-                  alt={`Photography by Leed ${i + 1}`}
+                  alt={getAltText(src, i)}
                   className="w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                   loading="lazy"
                 />

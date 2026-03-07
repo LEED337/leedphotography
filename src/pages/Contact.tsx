@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Instagram, Send } from "lucide-react";
+import { Mail, Instagram, Send, MapPin } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
 
 const Contact = () => {
@@ -8,16 +8,16 @@ const Contact = () => {
     name: "",
     email: "",
     phone: "",
+    service: "",
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // mailto fallback
-    const subject = encodeURIComponent(`Inquiry from ${formData.name}`);
+    const subject = encodeURIComponent(`Inquiry from ${formData.name} — ${formData.service || "General"}`);
     const body = encodeURIComponent(
-      `Name: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\n\n${formData.message}`
+      `Name: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nService: ${formData.service}\n\n${formData.message}`
     );
     window.location.href = `mailto:followtheleed@gmail.com?subject=${subject}&body=${body}`;
     setSubmitted(true);
@@ -32,8 +32,16 @@ const Contact = () => {
             animate={{ opacity: 1, y: 0 }}
             className="font-display text-4xl md:text-6xl font-light text-foreground mb-4"
           >
-            Contact
+            Book a Session
           </motion.h1>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="font-body text-muted-foreground mb-4 max-w-2xl"
+          >
+            Ready to book a Utah photographer or videographer? Get in touch for weddings, family portraits, headshots, events, or commercial video projects.
+          </motion.p>
           <motion.div
             initial={{ width: 0 }}
             animate={{ width: "3rem" }}
@@ -50,10 +58,14 @@ const Contact = () => {
               className="space-y-8"
             >
               <p className="font-body text-muted-foreground leading-relaxed">
-                Let's create something meaningful together. Whether it's capturing your special moments or producing compelling video content, I'd love to hear from you.
+                Whether it's your wedding day, a family session in the Utah mountains, professional headshots, or video content for your restaurant or business — I'd love to hear from you.
               </p>
 
               <div className="space-y-4">
+                <div className="flex items-center gap-3 text-foreground font-body">
+                  <MapPin size={16} className="text-primary" />
+                  Based in Utah — available statewide &amp; for travel
+                </div>
                 <a
                   href="mailto:followtheleed@gmail.com"
                   className="flex items-center gap-3 text-foreground hover:text-primary transition-colors font-body"
@@ -125,6 +137,26 @@ const Contact = () => {
                   </div>
                   <div>
                     <label className="font-display text-xs tracking-[0.2em] uppercase text-muted-foreground mb-2 block">
+                      Service Interested In
+                    </label>
+                    <select
+                      value={formData.service}
+                      onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                      className="w-full bg-transparent border-b border-border py-3 font-body text-foreground focus:border-primary focus:outline-none transition-colors"
+                    >
+                      <option value="">Select a service...</option>
+                      <option value="Wedding Photography">Wedding Photography</option>
+                      <option value="Family Photos">Family Photos</option>
+                      <option value="Professional Headshots">Professional Headshots</option>
+                      <option value="Event Photography">Event Photography</option>
+                      <option value="Wedding Videography">Wedding Videography</option>
+                      <option value="Event Videography">Event Videography</option>
+                      <option value="Restaurant / Commercial Video">Restaurant / Commercial Video</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="font-display text-xs tracking-[0.2em] uppercase text-muted-foreground mb-2 block">
                       Message
                     </label>
                     <textarea
@@ -132,6 +164,7 @@ const Contact = () => {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="w-full bg-transparent border-b border-border py-3 font-body text-foreground focus:border-primary focus:outline-none transition-colors resize-none"
+                      placeholder="Tell me about your event, date, and location..."
                     />
                   </div>
                   <button
