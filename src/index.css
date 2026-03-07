@@ -69,7 +69,7 @@
   }
 
   ::selection {
-    background: hsl(38 60% 65% / 0.3);
+    background: hsl(160 40% 70% / 0.3);
     color: hsl(0 0% 95%);
   }
 }
