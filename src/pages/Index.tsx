@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Camera, Video, Users, Building2 } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
 import heroBg from "@/assets/hero-bg.jpg";
 
@@ -12,7 +12,7 @@ const Index = () => {
         <div className="absolute inset-0">
           <img
             src={heroBg}
-            alt="Leed Photography landscape"
+            alt="Utah landscape photography by Leed Photography"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-background/60" />
@@ -34,14 +34,23 @@ const Index = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="mt-8 font-body text-lg md:text-xl text-foreground/90 tracking-wide max-w-md italic"
+            className="mt-6 font-body text-base md:text-lg text-foreground/80 tracking-wide max-w-lg"
+          >
+            Utah's professional photographer &amp; videographer — weddings, portraits, events, and commercial video.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1 }}
+            className="mt-4 font-body text-lg md:text-xl text-foreground/90 tracking-wide max-w-md italic"
           >
             "We do not remember days, we remember moments."
           </motion.p>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
+            transition={{ duration: 1, delay: 1.1 }}
             className="mt-2 font-display text-xs text-foreground/70 tracking-[0.3em] uppercase"
           >
             — Cesare Pavese
@@ -54,10 +63,10 @@ const Index = () => {
             className="mt-12"
           >
             <Link
-              to="/photo"
+              to="/contact"
               className="group inline-flex items-center gap-3 font-display text-sm tracking-[0.2em] uppercase text-primary border border-primary/30 px-8 py-4 hover:bg-primary/10 transition-all duration-300"
             >
-              View Work
+              Book a Session
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </motion.div>
@@ -74,8 +83,52 @@ const Index = () => {
         </motion.div>
       </section>
 
-      {/* Categories */}
+      {/* Services */}
       <section className="py-24 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="font-display text-xs tracking-[0.3em] uppercase text-primary mb-4"
+          >
+            Services
+          </motion.p>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-display text-3xl md:text-4xl font-light text-foreground mb-16"
+          >
+            Photography & Videography in Utah
+          </motion.h2>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { icon: Camera, title: "Wedding Photography", desc: "Capturing every moment of your Utah wedding — ceremonies, receptions, and intimate elopements." },
+              { icon: Users, title: "Family & Portraits", desc: "Beautiful family photos and professional headshots in stunning Utah locations." },
+              { icon: Video, title: "Wedding & Event Video", desc: "Cinematic wedding films and event highlight reels that tell your story." },
+              { icon: Building2, title: "Commercial Video", desc: "Promotional videos for restaurants, gyms, service companies, and local Utah businesses." },
+            ].map((service, i) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="space-y-4"
+              >
+                <service.icon size={28} className="text-primary" />
+                <h3 className="font-display text-lg text-foreground">{service.title}</h3>
+                <p className="font-body text-sm text-muted-foreground leading-relaxed">{service.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio Categories */}
+      <section className="py-24 px-6 md:px-12 border-t border-border">
         <div className="max-w-7xl mx-auto">
           <motion.p
             initial={{ opacity: 0 }}
@@ -83,33 +136,35 @@ const Index = () => {
             viewport={{ once: true }}
             className="font-display text-xs tracking-[0.3em] uppercase text-primary mb-12"
           >
-            Explore
+            Portfolio
           </motion.p>
 
           <div className="grid md:grid-cols-2 gap-4">
             <Link to="/photo" className="group relative aspect-[4/3] overflow-hidden">
               <img
                 src="/images/DSC03445-768x512.webp"
-                alt="Portrait photography"
+                alt="Utah portrait and landscape photography portfolio by Leed Photography"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-background/40 group-hover:bg-background/20 transition-colors duration-500" />
               <div className="absolute bottom-0 left-0 p-8">
                 <h3 className="font-display text-2xl md:text-3xl text-foreground tracking-wide">Photo</h3>
-                <p className="font-body text-sm text-muted-foreground mt-1">Portraits & Landscapes</p>
+                <p className="font-body text-sm text-muted-foreground mt-1">Weddings, Portraits & Landscapes</p>
               </div>
             </Link>
 
             <Link to="/video" className="group relative aspect-[4/3] overflow-hidden">
               <img
                 src="/images/DSC02801-1024x683.jpg"
-                alt="Video production"
+                alt="Utah wedding and event videography portfolio by Leed Photography"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-background/40 group-hover:bg-background/20 transition-colors duration-500" />
               <div className="absolute bottom-0 left-0 p-8">
                 <h3 className="font-display text-2xl md:text-3xl text-foreground tracking-wide">Video</h3>
-                <p className="font-body text-sm text-muted-foreground mt-1">Events, Services & Creative</p>
+                <p className="font-body text-sm text-muted-foreground mt-1">Weddings, Events & Commercial</p>
               </div>
             </Link>
           </div>
@@ -129,6 +184,15 @@ const Index = () => {
             <br />
             <span className="text-gradient">be forgotten.</span>
           </motion.h2>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="mt-6 font-body text-muted-foreground max-w-md mx-auto"
+          >
+            Based in Utah, available for travel. Let's capture your next wedding, family session, or create stunning video content for your business.
+          </motion.p>
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -140,7 +204,7 @@ const Index = () => {
               to="/contact"
               className="inline-flex items-center gap-3 font-display text-sm tracking-[0.2em] uppercase text-primary border border-primary/30 px-8 py-4 hover:bg-primary/10 transition-all duration-300"
             >
-              Let's Create Something
+              Get a Free Quote
               <ArrowRight size={16} />
             </Link>
           </motion.div>

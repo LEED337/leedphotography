@@ -3,12 +3,12 @@ import PageTransition from "@/components/PageTransition";
 
 const videos = [
   {
-    category: "Events",
+    category: "Wedding",
     title: "Dean & Stefie 2024",
     vimeoId: "1050354281",
   },
   {
-    category: "Services",
+    category: "Commercial",
     title: "Wasatch Integrated Wellness",
     vimeoId: "372444561",
   },
@@ -29,8 +29,16 @@ const Video = () => {
             animate={{ opacity: 1, y: 0 }}
             className="font-display text-4xl md:text-6xl font-light text-foreground mb-4"
           >
-            Video
+            Videography Portfolio
           </motion.h1>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="font-body text-muted-foreground mb-4 max-w-2xl"
+          >
+            Professional videography services in Utah — cinematic wedding films, event coverage, restaurant promos, and commercial video for gyms, service companies, and local businesses.
+          </motion.p>
           <motion.div
             initial={{ width: 0 }}
             animate={{ width: "3rem" }}
@@ -60,7 +68,7 @@ const Video = () => {
                     frameBorder="0"
                     allow="autoplay; fullscreen; picture-in-picture"
                     allowFullScreen
-                    title={video.title}
+                    title={`${video.title} - Utah ${video.category.toLowerCase()} videography by Leed Photography`}
                   />
                 </div>
               </motion.div>
