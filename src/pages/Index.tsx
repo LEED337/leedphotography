@@ -171,6 +171,73 @@ const Index = () => {
         </div>
       </section>
 
+      {/* About Lee */}
+      <section className="py-24 px-6 md:px-12 border-t border-border">
+        <div className="max-w-7xl mx-auto">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="font-display text-xs tracking-[0.3em] uppercase text-primary mb-4"
+          >
+            About
+          </motion.p>
+
+          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative aspect-[3/4] overflow-hidden"
+            >
+              <img
+                src="/images/DLDPort.JPG"
+                alt="Lee Denning — Utah photographer and videographer behind Leed Photography"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="space-y-6"
+            >
+              <h2 className="font-display text-3xl md:text-4xl font-light text-foreground">
+                Lee Denning
+              </h2>
+              <p className="font-display text-sm tracking-[0.15em] uppercase text-primary/80">
+                From VHS Tapes to High-Definition Memories
+              </p>
+              <div className="space-y-4 font-body text-sm md:text-base text-muted-foreground leading-relaxed">
+                <p>
+                  My obsession with the frame started in the 90s, hauling my dad's oversized VHS camcorder around as a kid. What began as a childhood curiosity evolved into a lifelong pursuit of mastering the light.
+                </p>
+                <p>
+                  In 2010, that passion caught fire again during weekend treks into the wilderness to capture the stillness of the stars and the scale of the desert. Since then, I've been fortunate enough to document it all: the quiet "I do" of a wedding, the grit of a late-night gym session, and the fast-paced energy of little league sports.
+                </p>
+                <p>
+                  To me, every project—whether it's a luxury real estate listing or a family portrait—is an opportunity to sharpen my craft and tell a unique story.
+                </p>
+                <p className="text-foreground/90 italic">
+                  Based in the heart of Utah and always ready to pack a bag for a destination shoot. Let's create something timeless.
+                </p>
+              </div>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-3 font-display text-sm tracking-[0.2em] uppercase text-primary border border-primary/30 px-8 py-4 hover:bg-primary/10 transition-all duration-300 mt-4"
+              >
+                Work With Me
+                <ArrowRight size={16} />
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-24 px-6 md:px-12 border-t border-border">
         <div className="max-w-7xl mx-auto text-center">
