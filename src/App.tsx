@@ -14,14 +14,12 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const basename = window.location.hostname.includes("github.io") ? "/leedphotography" : "";
-
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename={basename}>
+      <BrowserRouter>
         <Navigation />
         <AnimatePresence mode="wait">
           <Routes>

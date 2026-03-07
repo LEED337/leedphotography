@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
-import heroBg from "@/assets/hero-bg.jpg";
 
 const Index = () => {
   return (
@@ -11,7 +10,7 @@ const Index = () => {
       <section className="relative h-screen overflow-hidden grain-overlay">
         <div className="absolute inset-0">
           <img
-            src={heroBg}
+            src="https://leedphotography.com/wp-content/uploads/2025/01/WithSky-1024x683.jpg"
             alt="Leed Photography landscape"
             className="w-full h-full object-cover"
           />
@@ -34,7 +33,7 @@ const Index = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="mt-8 font-body text-lg md:text-xl text-foreground/80 tracking-wide max-w-md italic"
+            className="mt-8 font-body text-lg md:text-xl text-muted-foreground tracking-wide max-w-md italic"
           >
             "We do not remember days, we remember moments."
           </motion.p>
@@ -42,7 +41,7 @@ const Index = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
-            className="mt-2 font-display text-xs text-foreground/60 tracking-[0.3em] uppercase"
+            className="mt-2 font-display text-xs text-muted-foreground tracking-[0.3em] uppercase"
           >
             — Cesare Pavese
           </motion.p>
