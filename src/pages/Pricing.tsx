@@ -28,7 +28,7 @@ const weddingPhotoTiers = [
   {
     name: "Elopements & Micro Weddings",
     price: "Starting at $1,800",
-    features: ["3–4 hours of coverage", "Curated online gallery"],
+    features: ["3–4 hours of coverage", "1 location", "Curated online gallery"],
   },
   {
     name: "Standard Wedding Day",
