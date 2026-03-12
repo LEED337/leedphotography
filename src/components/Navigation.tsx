@@ -44,8 +44,9 @@ const Navigation = () => {
             <Link
               key={item.path}
               to={item.path}
+              onClick={(e) => handleClick(e, item.path)}
               className={`font-display text-sm tracking-widest uppercase transition-opacity duration-300 text-foreground ${
-                location.pathname === item.path ? "opacity-100" : "opacity-50 hover:opacity-80"
+                location.pathname === item.path || (item.path === "/#about" && location.hash === "#about") ? "opacity-100" : "opacity-50 hover:opacity-80"
               }`}
             >
               {item.label}
