@@ -10,6 +10,7 @@ import Index from "./pages/Index";
 import Photo from "./pages/Photo";
 import Video from "./pages/Video";
 import Contact from "./pages/Contact";
+import Pricing from "./pages/Pricing";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
