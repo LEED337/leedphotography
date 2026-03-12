@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useState, useCallback } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
@@ -7,12 +7,29 @@ const navItems = [
   { label: "Home", path: "/" },
   { label: "Photo", path: "/photo" },
   { label: "Video", path: "/video" },
+  { label: "About", path: "/#about" },
   { label: "Contact", path: "/contact" },
 ];
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleClick = useCallback((e: React.MouseEvent, path: string) => {
+    if (path === "/#about") {
+      e.preventDefault();
+      if (location.pathname === "/") {
+        document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+      } else {
+        navigate("/");
+        setTimeout(() => {
+          document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+        }, 300);
+      }
+      setIsOpen(false);
+    }
+  }, [location.pathname, navigate]);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 mix-blend-difference">
@@ -27,8 +44,9 @@ const Navigation = () => {
             <Link
               key={item.path}
               to={item.path}
+              onClick={(e) => handleClick(e, item.path)}
               className={`font-display text-sm tracking-widest uppercase transition-opacity duration-300 text-foreground ${
-                location.pathname === item.path ? "opacity-100" : "opacity-50 hover:opacity-80"
+                location.pathname === item.path || (item.path === "/#about" && location.hash === "#about") ? "opacity-100" : "opacity-50 hover:opacity-80"
               }`}
             >
               {item.label}
@@ -69,7 +87,7 @@ const Navigation = () => {
               >
                 <Link
                   to={item.path}
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => { handleClick(e, item.path); setIsOpen(false); }}
                   className={`font-display text-3xl tracking-widest uppercase transition-opacity text-foreground ${
                     location.pathname === item.path ? "opacity-100" : "opacity-50"
                   }`}
