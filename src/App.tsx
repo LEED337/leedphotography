@@ -10,6 +10,7 @@ import Index from "./pages/Index";
 import Photo from "./pages/Photo";
 import Video from "./pages/Video";
 import Contact from "./pages/Contact";
+import Pricing from "./pages/Pricing";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/photo" element={<Photo />} />
             <Route path="/video" element={<Video />} />
+            <Route path="/pricing" element={<Pricing />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
