@@ -205,7 +205,7 @@ const Pricing = () => {
 
         {/* Weddings & Events – Photography */}
         <div className="mt-32">
-          <SectionHeading title="Weddings & Events – Photography" subtitle="Transparent coverage options for your day." delay={0.3} />
+          <SectionHeading title="Weddings & Events Photography" subtitle="Transparent coverage options for your day." delay={0.3} />
           <CardGrid tiers={weddingPhotoTiers} buttonText="Check Availability" buttonLink="/contact" delayStart={0.4} />
         </div>
 
