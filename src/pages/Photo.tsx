@@ -17,6 +17,7 @@ const sections: PhotoSection[] = [
     description: "Capturing the joy, emotion, and celebration of your most important moments across Utah.",
     images: [
       "/images/DSC03445-scaled.webp",
+      "/images/untitled-01103-scaled.jpg",
       "/images/DSC05624-scaled.webp",
     ],
   },
