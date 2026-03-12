@@ -74,7 +74,7 @@ const Navigation = () => {
           >
             <button
               onClick={() => setIsOpen(false)}
-              className="absolute top-6 right-6 text-white"
+              className="absolute top-6 right-6 text-foreground"
             >
               <X size={24} />
             </button>
