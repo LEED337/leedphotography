@@ -144,15 +144,15 @@ const Contact = () => {
                       onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                       className="w-full bg-transparent border-b border-border py-3 font-body text-foreground focus:border-primary focus:outline-none transition-colors"
                     >
-                      <option value="">Select a service...</option>
-                      <option value="Wedding Photography">Wedding Photography</option>
-                      <option value="Family Photos">Family Photos</option>
-                      <option value="Professional Headshots">Professional Headshots</option>
-                      <option value="Event Photography">Event Photography</option>
-                      <option value="Wedding Videography">Wedding Videography</option>
-                      <option value="Event Videography">Event Videography</option>
-                      <option value="Restaurant / Commercial Video">Restaurant / Commercial Video</option>
-                      <option value="Other">Other</option>
+                      <option value="" className="text-black bg-white">Select a service...</option>
+                      <option value="Wedding Photography" className="text-black bg-white">Wedding Photography</option>
+                      <option value="Family Photos" className="text-black bg-white">Family Photos</option>
+                      <option value="Professional Headshots" className="text-black bg-white">Professional Headshots</option>
+                      <option value="Event Photography" className="text-black bg-white">Event Photography</option>
+                      <option value="Wedding Videography" className="text-black bg-white">Wedding Videography</option>
+                      <option value="Event Videography" className="text-black bg-white">Event Videography</option>
+                      <option value="Restaurant / Commercial Video" className="text-black bg-white">Restaurant / Commercial Video</option>
+                      <option value="Other" className="text-black bg-white">Other</option>
                     </select>
                   </div>
                   <div>
