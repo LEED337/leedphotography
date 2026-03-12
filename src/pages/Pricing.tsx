@@ -211,7 +211,7 @@ const Pricing = () => {
 
         {/* Commercial Photography */}
         <div className="mt-32">
-          <SectionHeading title="Other Photography" subtitle="Products, homes, action, or art" delay={0.5} />
+          <SectionHeading title="Other Photography" subtitle="Products, estates, action, or art." delay={0.5} />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {commercialPhotoOfferings.map((item, i) => (
               <motion.div
