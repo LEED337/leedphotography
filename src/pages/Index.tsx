@@ -251,7 +251,7 @@ const Index = () => {
       </section>
 
       {/* About Lee */}
-      <section className="py-24 px-6 md:px-12 border-t border-border">
+      <section id="about" className="py-24 px-6 md:px-12 border-t border-border">
         <div className="max-w-7xl mx-auto">
           <motion.p
             initial={{ opacity: 0 }}
