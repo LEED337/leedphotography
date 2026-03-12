@@ -88,8 +88,8 @@ const Navigation = () => {
                 <Link
                   to={item.path}
                   onClick={(e) => { handleClick(e, item.path); setIsOpen(false); }}
-                  className={`font-display text-3xl tracking-widest uppercase text-white ${
-                    location.pathname === item.path ? "opacity-100" : "opacity-70"
+                  className={`font-display text-3xl tracking-widest uppercase text-foreground transition-opacity ${
+                    location.pathname === item.path ? "opacity-100" : "opacity-80"
                   }`}
                 >
                   {item.label}
