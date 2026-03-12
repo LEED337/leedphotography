@@ -45,10 +45,7 @@ const Video = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.6 }}
               >
-                <p className="font-display text-xs tracking-[0.3em] uppercase text-primary mb-3">
-                  {video.category}
-                </p>
-                <h2 className="font-display text-xl md:text-2xl text-foreground mb-6">
+                <h2 className="font-display text-xl md:text-2xl text-primary mb-6">
                   {video.title}
                 </h2>
                 <div className="relative w-full aspect-video bg-secondary overflow-hidden">
