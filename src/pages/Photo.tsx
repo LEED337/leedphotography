@@ -48,6 +48,7 @@ const sections: PhotoSection[] = [
       "/images/DSC09633-scaled.jpg",
       "/images/DSC09586-scaled.jpg",
       "/images/DSC07056-scaled.jpg",
+      "/images/family-portrait.png",
     ],
   },
   {
