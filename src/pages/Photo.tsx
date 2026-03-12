@@ -48,8 +48,8 @@ const sections: PhotoSection[] = [
     ],
   },
   {
-    id: "sports",
-    title: "Sports",
+    id: "motion",
+    title: "Motion",
     description: "Action photography capturing the intensity, grit, and excitement of athletic competition.",
     images: [
       "/images/DSC09633-scaled.jpg",
