@@ -97,7 +97,7 @@ const commercialVideoTiers = [
     features: [
       "Up to 60 minutes on site",
       "1-camera setup + b-roll, clean audio & lighting",
-      "One main edit (2–5 min) + 2–3 short cut-downs",
+      "One main edit (2–5 min)",
       "Half-day interview block available from $1,500",
     ],
   },
