@@ -107,7 +107,7 @@ const Pricing = () => {
             Transparent coverage options for your day.
           </p>
 
-          <div className="max-w-2xl mx-auto space-y-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 name: "Elopements & Micro Weddings",
@@ -133,34 +133,34 @@ const Pricing = () => {
                 ],
               },
             ].map((tier, i) => (
-              <div
+              <motion.div
                 key={tier.name}
-                className="border-b border-border pb-8 last:border-b-0"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7 + i * 0.1 }}
+                className="border border-border rounded-sm bg-card p-8 flex flex-col items-center text-center"
               >
-                <h3 className="font-display text-xl font-semibold text-foreground mb-1">
+                <h3 className="font-display text-2xl font-semibold text-foreground mb-2">
                   {tier.name}
                 </h3>
-                <p className="font-display text-lg font-bold text-primary mb-3">
+                <p className="font-display text-3xl font-bold text-primary mb-8">
                   {tier.price}
                 </p>
-                <ul className="space-y-1">
+                <ul className="space-y-3 mb-10 flex-1">
                   {tier.features.map((f) => (
                     <li key={f} className="font-body text-muted-foreground text-sm">
                       {f}
                     </li>
                   ))}
                 </ul>
-              </div>
+                <Link
+                  to="/contact"
+                  className="font-display text-sm tracking-widest uppercase border border-primary text-primary px-8 py-3 rounded-sm transition-colors hover:bg-primary hover:text-primary-foreground"
+                >
+                  Check Availability
+                </Link>
+              </motion.div>
             ))}
-
-            <div className="text-center pt-4">
-              <Link
-                to="/contact"
-                className="font-display text-sm tracking-widest uppercase border border-primary text-primary px-8 py-3 rounded-sm transition-colors hover:bg-primary hover:text-primary-foreground inline-block"
-              >
-                Check Availability
-              </Link>
-            </div>
           </div>
         </motion.div>
       </div>
