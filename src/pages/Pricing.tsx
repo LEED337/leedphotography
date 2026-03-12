@@ -87,7 +87,7 @@ const commercialVideoTiers = [
     features: [
       "60–120 second cinematic overview",
       "B-roll + interview audio, on-location",
-      "Half-day on site, 1–2 locations",
+      "Half-day on site",
       "Basic script/outline support",
     ],
   },
