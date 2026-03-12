@@ -256,50 +256,7 @@ const Pricing = () => {
         {/* Wedding Films */}
         <div className="mb-32">
           <SectionHeading title="Wedding Films" subtitle="Cinematic storytelling for the moments that move." delay={0.1} />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto items-start">
-            {/* Text / Packages */}
-            <div className="space-y-8">
-              {weddingFilmTiers.map((tier, i) => (
-                <motion.div
-                  key={tier.name}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.2 + i * 0.15 }}
-                  className="border border-border rounded-sm bg-card p-6"
-                >
-                  <h3 className="font-display text-xl font-semibold text-foreground mb-1">{tier.name}</h3>
-                  <p className="font-display text-2xl font-bold text-primary mb-4">{tier.price}</p>
-                  <ul className="space-y-2">
-                    {tier.features.map((f) => (
-                      <li key={f} className="font-body text-muted-foreground text-sm">{f}</li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
-                <Link
-                  to="/video"
-                  className="font-display text-sm tracking-widest uppercase border border-primary text-primary px-8 py-3 rounded-sm transition-colors hover:bg-primary hover:text-primary-foreground inline-block"
-                >
-                  View More Films
-                </Link>
-              </motion.div>
-            </div>
-            {/* Featured Image */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.3 }}
-              className="rounded-sm overflow-hidden"
-            >
-              <img
-                src="/images/DSC03306-scaled.webp"
-                alt="Wedding film still"
-                className="w-full h-full object-cover aspect-[4/5]"
-                loading="lazy"
-              />
-            </motion.div>
-          </div>
+          <CardGrid tiers={weddingFilmTiers} buttonText="Check Availability" buttonLink="/contact" delayStart={0.2} />
         </div>
 
         {/* Commercial & Brand Video */}
