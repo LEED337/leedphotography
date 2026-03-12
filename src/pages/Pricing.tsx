@@ -49,7 +49,6 @@ const weddingFilmTiers = [
     features: [
       "3–5 minute cinematic highlight film",
       "Professional audio from vows and speeches where available",
-      "Delivered via online gallery",
     ],
   },
   {
@@ -59,7 +58,14 @@ const weddingFilmTiers = [
       "3–5 minute cinematic highlight film",
       "Full ceremony edit",
       "Speeches / toasts edit",
-      "Raw footage add-on available",
+    ],
+  },
+  {
+    name: "Raw Footage Only",
+    price: "$1,000",
+    features: [
+      "Full unedited footage from your day",
+      "Find your own editor",
     ],
   },
 ];
@@ -81,7 +87,7 @@ const commercialVideoTiers = [
     features: [
       "60–120 second cinematic overview",
       "B-roll + interview audio, on-location",
-      "Half-day on site, 1–2 locations",
+      "Half-day on site",
       "Basic script/outline support",
     ],
   },
@@ -91,7 +97,7 @@ const commercialVideoTiers = [
     features: [
       "Up to 60 minutes on site",
       "1-camera setup + b-roll, clean audio & lighting",
-      "One main edit (2–5 min) + 2–3 short cut-downs",
+      "One main edit (2–5 min)",
       "Half-day interview block available from $1,500",
     ],
   },
@@ -99,7 +105,7 @@ const commercialVideoTiers = [
 
 const commercialPhotoOfferings = [
   { label: "Product Photography", price: "Starting at $400", desc: "Up to 10 products, 3–5 images each. Commercial usage rights included." },
-  { label: "Real Estate & Airbnb", price: "Starting at $250", desc: "25–35 edited photos. Drone, twilight & video walkthrough add-ons available." },
+  { label: "Real Estate & Airbnb", price: "Starting at $200", desc: "25–35 edited photos. Drone, twilight & video walkthrough add-ons available." },
   { label: "Sports / Motion Photography", price: "Starting at $250", desc: "Game & event coverage up to 2 hours. Action portrait sessions from $300." },
   { label: "Landscape / Fine Art Prints", price: "From $100+", desc: "Framed fine art prints. Contact for custom sizes and installations." },
 ];
@@ -205,7 +211,7 @@ const Pricing = () => {
 
         {/* Commercial Photography */}
         <div className="mt-32">
-          <SectionHeading title="Commercial Photography" subtitle="Professional imagery for businesses and brands." delay={0.5} />
+          <SectionHeading title="Other Photography" subtitle="Professional imagery for businesses and brands." delay={0.5} />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {commercialPhotoOfferings.map((item, i) => (
               <motion.div
