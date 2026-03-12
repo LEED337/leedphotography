@@ -93,6 +93,76 @@ const Pricing = () => {
             </motion.div>
           ))}
         </div>
+        {/* Weddings & Events Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          className="mt-32"
+        >
+          <h2 className="font-display text-3xl md:text-4xl font-semibold text-center mb-4 bg-gradient-to-r from-primary to-accent-foreground bg-clip-text text-transparent">
+            Weddings &amp; Events – Photography
+          </h2>
+          <p className="font-body text-muted-foreground text-center mb-12 max-w-xl mx-auto">
+            Transparent coverage options for your day.
+          </p>
+
+          <div className="max-w-2xl mx-auto space-y-10">
+            {[
+              {
+                name: "Elopements & Micro Weddings",
+                price: "Starting at $1,800",
+                features: ["3–4 hours of coverage", "Curated online gallery"],
+              },
+              {
+                name: "Standard Wedding Day",
+                price: "Starting at $2,400",
+                features: [
+                  "6–8 hours of coverage",
+                  "Curated online gallery",
+                  "Timeline planning support",
+                ],
+              },
+              {
+                name: "Full Day Collection",
+                price: "Starting at $3,500",
+                features: [
+                  "10+ hours of coverage",
+                  "Engagement or bridal session included",
+                  "Curated online gallery",
+                ],
+              },
+            ].map((tier, i) => (
+              <div
+                key={tier.name}
+                className="border-b border-border pb-8 last:border-b-0"
+              >
+                <h3 className="font-display text-xl font-semibold text-foreground mb-1">
+                  {tier.name}
+                </h3>
+                <p className="font-display text-lg font-bold text-primary mb-3">
+                  {tier.price}
+                </p>
+                <ul className="space-y-1">
+                  {tier.features.map((f) => (
+                    <li key={f} className="font-body text-muted-foreground text-sm">
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+
+            <div className="text-center pt-4">
+              <Link
+                to="/contact"
+                className="font-display text-sm tracking-widest uppercase border border-primary text-primary px-8 py-3 rounded-sm transition-colors hover:bg-primary hover:text-primary-foreground inline-block"
+              >
+                Check Availability
+              </Link>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </motion.div>
   );
