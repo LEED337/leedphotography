@@ -140,33 +140,34 @@ const Index = () => {
           </motion.p>
 
           <div className="grid md:grid-cols-2 gap-4">
-            <Link to="/photo" className="group relative aspect-[4/3] overflow-hidden">
-              <img
-                src="/images/DSC03445-768x512.webp"
-                alt="Utah portrait and landscape photography portfolio by Leed Photography"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-background/40 group-hover:bg-background/20 transition-colors duration-500" />
-              <div className="absolute bottom-0 left-0 p-8">
-                <h3 className="font-display text-2xl md:text-3xl text-foreground tracking-wide">Photo</h3>
-                <p className="font-body text-sm text-muted-foreground mt-1">Weddings, Portraits & Landscapes</p>
-              </div>
-            </Link>
-
-            <Link to="/video" className="group relative aspect-[4/3] overflow-hidden">
-              <img
-                src="/images/DSC02801-1024x683.jpg"
-                alt="Utah wedding and event videography portfolio by Leed Photography"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-background/40 group-hover:bg-background/20 transition-colors duration-500" />
-              <div className="absolute bottom-0 left-0 p-8">
-                <h3 className="font-display text-2xl md:text-3xl text-foreground tracking-wide">Video</h3>
-                <p className="font-body text-sm text-muted-foreground mt-1">Weddings, Events & Commercial</p>
-              </div>
-            </Link>
+            {[
+              { to: "/photo", img: "/images/DSC03445-768x512.webp", title: "Weddings & Events", desc: "Ceremonies, receptions & celebrations" },
+              { to: "/photo", img: "/images/WithSky.jpg", title: "Landscapes", desc: "Utah wilderness & beyond" },
+              { to: "/photo", img: "/images/DSC03970-1-scaled.jpg", title: "Family & Portraits", desc: "Family sessions & professional headshots" },
+              { to: "/photo", img: "/images/DSC09633-scaled.jpg", title: "Sports", desc: "Action, athletics & competition" },
+            ].map((cat, i) => (
+              <motion.div
+                key={cat.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+              >
+                <Link to={cat.to} className="group relative aspect-[4/3] overflow-hidden block">
+                  <img
+                    src={cat.img}
+                    alt={`${cat.title} photography in Utah by Leed Photography`}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-background/40 group-hover:bg-background/20 transition-colors duration-500" />
+                  <div className="absolute bottom-0 left-0 p-8">
+                    <h3 className="font-display text-2xl md:text-3xl text-foreground tracking-wide">{cat.title}</h3>
+                    <p className="font-body text-sm text-muted-foreground mt-1">{cat.desc}</p>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
