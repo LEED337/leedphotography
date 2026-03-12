@@ -18,7 +18,8 @@ const sections: PhotoSection[] = [
     images: [
       "/images/DSC03445-scaled.webp",
       "/images/untitled-01103-scaled.jpg",
-      "/images/DSC05624-scaled.webp",
+      "/images/DSC03306-scaled.webp",
+      "/images/DSC07110-scaled.jpg",
     ],
   },
   {
