@@ -105,7 +105,7 @@ const commercialVideoTiers = [
 
 const commercialPhotoOfferings = [
   { label: "Product Photography", price: "Starting at $400", desc: "Up to 10 products, 3–5 images each. Commercial usage rights included." },
-  { label: "Real Estate & Airbnb", price: "Starting at $200", desc: "25–35 edited photos. Drone, twilight & video walkthrough add-ons available." },
+  { label: "Real Estate & Airbnb", price: "Starting at $200", desc: "Up to 50 edited photos. Drone, twilight & video walkthrough add-ons available. Travel beyond 10 miles may include additional fees depending on distance." },
   { label: "Sports / Motion Photography", price: "Starting at $250", desc: "Game & event coverage up to 2 hours. Action portrait sessions from $300." },
   { label: "Landscape / Fine Art Prints", price: "From $100+", desc: "Framed fine art prints. Contact for custom sizes and installations." },
 ];
