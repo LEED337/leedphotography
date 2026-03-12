@@ -172,6 +172,84 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Video Portfolio */}
+      <section className="py-24 px-6 md:px-12 border-t border-border">
+        <div className="max-w-7xl mx-auto">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="font-display text-xs tracking-[0.3em] uppercase text-primary mb-4"
+          >
+            Videography
+          </motion.p>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-display text-3xl md:text-4xl font-light text-foreground mb-6"
+          >
+            Cinematic Video Production
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="font-body text-muted-foreground mb-12 max-w-2xl"
+          >
+            Wedding films, event coverage, restaurant promos, and commercial video for Utah businesses.
+          </motion.p>
+
+          <div className="grid md:grid-cols-3 gap-4">
+            {[
+              { title: "Wedding Films", desc: "Cinematic highlights of your big day", vimeoId: "1050354281" },
+              { title: "Commercial", desc: "Promo videos for businesses & brands", vimeoId: "372444561" },
+              { title: "Creative", desc: "Artistic & documentary projects", vimeoId: "1041178358" },
+            ].map((vid, i) => (
+              <motion.div
+                key={vid.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="space-y-3"
+              >
+                <div className="relative aspect-video bg-secondary overflow-hidden">
+                  <iframe
+                    src={`https://player.vimeo.com/video/${vid.vimeoId}?h=0&title=0&byline=0&portrait=0&color=c9a96e`}
+                    className="absolute inset-0 w-full h-full"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowFullScreen
+                    title={`${vid.title} — Utah videography by Leed Photography`}
+                    loading="lazy"
+                  />
+                </div>
+                <h3 className="font-display text-lg text-foreground">{vid.title}</h3>
+                <p className="font-body text-sm text-muted-foreground">{vid.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="mt-10"
+          >
+            <Link
+              to="/video"
+              className="inline-flex items-center gap-3 font-display text-sm tracking-[0.2em] uppercase text-primary border border-primary/30 px-8 py-4 hover:bg-primary/10 transition-all duration-300"
+            >
+              View Full Video Portfolio
+              <ArrowRight size={16} />
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
       {/* About Lee */}
       <section className="py-24 px-6 md:px-12 border-t border-border">
         <div className="max-w-7xl mx-auto">
