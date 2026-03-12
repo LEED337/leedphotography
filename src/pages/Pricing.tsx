@@ -49,7 +49,6 @@ const weddingFilmTiers = [
     features: [
       "3–5 minute cinematic highlight film",
       "Professional audio from vows and speeches where available",
-      "Delivered via online gallery",
     ],
   },
   {
@@ -59,7 +58,14 @@ const weddingFilmTiers = [
       "3–5 minute cinematic highlight film",
       "Full ceremony edit",
       "Speeches / toasts edit",
-      "Raw footage add-on available",
+    ],
+  },
+  {
+    name: "Raw Footage Only",
+    price: "$1,000",
+    features: [
+      "Full unedited footage from your day",
+      "Find your own editor",
     ],
   },
 ];
