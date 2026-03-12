@@ -70,11 +70,11 @@ const Navigation = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-background z-50 flex flex-col items-center justify-center gap-8"
+            className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex flex-col items-center justify-center gap-8"
           >
             <button
               onClick={() => setIsOpen(false)}
-              className="absolute top-6 right-6 text-foreground"
+              className="absolute top-6 right-6 text-white"
             >
               <X size={24} />
             </button>
@@ -88,8 +88,8 @@ const Navigation = () => {
                 <Link
                   to={item.path}
                   onClick={(e) => { handleClick(e, item.path); setIsOpen(false); }}
-                  className={`font-display text-3xl tracking-widest uppercase transition-opacity text-foreground ${
-                    location.pathname === item.path ? "opacity-100" : "opacity-50"
+                  className={`font-display text-3xl tracking-widest uppercase text-white ${
+                    location.pathname === item.path ? "opacity-100" : "opacity-70"
                   }`}
                 >
                   {item.label}
