@@ -144,7 +144,7 @@ const Index = () => {
               { to: "/photo", img: "/images/DSC03445-768x512.webp", title: "Weddings & Events", desc: "Ceremonies, receptions & celebrations" },
               { to: "/photo", img: "/images/WithSky.jpg", title: "Landscapes", desc: "Utah wilderness & beyond" },
               { to: "/photo", img: "/images/DSC03970-1-scaled.jpg", title: "Family & Portraits", desc: "Family sessions & professional headshots" },
-              { to: "/photo", img: "/images/DSC09633-scaled.jpg", title: "Motion", desc: "Action, athletics & competition" },
+              { to: "/photo", img: "/images/DSC09970.webp", title: "Motion", desc: "Action, athletics & competition" },
             ].map((cat, i) => (
               <motion.div
                 key={cat.title}
