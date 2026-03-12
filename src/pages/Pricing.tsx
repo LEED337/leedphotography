@@ -38,7 +38,7 @@ const weddingPhotoTiers = [
   {
     name: "Full Day Collection",
     price: "Starting at $3,500",
-    features: ["10+ hours of coverage", "Engagement or bridal session included", "Curated online gallery"],
+    features: ["10+ hours of coverage", "Up to 3 locations", "Engagement or bridal session included", "Curated online gallery"],
   },
 ];
 
