@@ -43,9 +43,7 @@ const sections: PhotoSection[] = [
     description: "Beautiful family sessions and professional headshots in stunning Utah locations.",
     images: [
       "/images/DSC05693-scaled.jpg",
-      "/images/DSC07110-scaled.jpg",
       "/images/DSC04385-scaled.webp",
-      "/images/DSC03306-scaled.webp",
       "/images/DSC09633-scaled.jpg",
       "/images/DSC09586-scaled.jpg",
       "/images/DSC07056-scaled.jpg",
