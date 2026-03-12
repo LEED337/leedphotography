@@ -33,7 +33,7 @@ const weddingPhotoTiers = [
   {
     name: "Standard Wedding Day",
     price: "Starting at $2,400",
-    features: ["6–8 hours of coverage", "Curated online gallery", "Timeline planning support"],
+    features: ["4–8 hours of coverage", "Up to 3 locations", "Curated online gallery", "Timeline planning support"],
   },
   {
     name: "Full Day Collection",
