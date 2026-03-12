@@ -2,21 +2,11 @@ import { motion } from "framer-motion";
 import PageTransition from "@/components/PageTransition";
 
 const videos = [
-  {
-    category: "Wedding",
-    title: "Dean & Stefie 2024",
-    vimeoId: "1050354281",
-  },
-  {
-    category: "Commercial",
-    title: "Wasatch Integrated Wellness",
-    vimeoId: "372444561",
-  },
-  {
-    category: "Creative",
-    title: "Capital Hill SLC",
-    vimeoId: "1041178358",
-  },
+  { category: "Wedding", title: "Wedding", vimeoId: "1050354281" },
+  { category: "Commercial", title: "Business", vimeoId: "372444561" },
+  { category: "Creative", title: "Creative", vimeoId: "1041178358" },
+  { category: "Restaurant", title: "Restaurants", vimeoId: "372438054" },
+  { category: "Fitness", title: "Fitness", vimeoId: "372450693" },
 ];
 
 const Video = () => {
