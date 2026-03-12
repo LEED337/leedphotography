@@ -32,7 +32,7 @@ const Navigation = () => {
   }, [location.pathname, navigate]);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 mix-blend-difference">
+    <nav className="fixed top-0 left-0 right-0 z-50 md:mix-blend-difference">
       <div className="flex items-center justify-between px-6 md:px-12 py-6">
         <Link to="/" className="font-display text-lg font-semibold tracking-wider text-foreground">
           LP
