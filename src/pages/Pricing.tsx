@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import usePageSEO from "@/hooks/usePageSEO";
 
 const portraitTiers = [
   {
@@ -181,6 +182,12 @@ const SectionHeading = ({
 };
 
 const Pricing = () => {
+  usePageSEO({
+    title: "Pricing | Lehi Wedding Photographer & Videographer",
+    description: "Transparent pricing for wedding photography, family portraits, wedding films, and commercial video in Lehi, Utah. Serving Utah County and Salt Lake City.",
+    canonical: "https://leedphotography.com/pricing",
+  });
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -264,6 +271,24 @@ const Pricing = () => {
           <SectionHeading title="Commercial & Brand Video" subtitle="Engaging video content for restaurants, gyms, clinics & local businesses." delay={0.3} />
           <CardGrid tiers={commercialVideoTiers} buttonText="Get a Quote" buttonLink="/contact" delayStart={0.4} />
         </div>
+
+        {/* Internal links */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6 }}
+          className="flex flex-wrap justify-center gap-6 mt-12 mb-16"
+        >
+          <Link to="/photo" className="font-body text-sm text-primary underline underline-offset-4 hover:text-primary/80 transition-colors">
+            Browse the photography portfolio
+          </Link>
+          <Link to="/video" className="font-body text-sm text-primary underline underline-offset-4 hover:text-primary/80 transition-colors">
+            Watch sample wedding films &amp; videos
+          </Link>
+          <Link to="/contact" className="font-body text-sm text-primary underline underline-offset-4 hover:text-primary/80 transition-colors">
+            Check availability for your date
+          </Link>
+        </motion.div>
 
         {/* Final CTA */}
         <motion.div
