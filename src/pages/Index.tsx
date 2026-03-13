@@ -121,8 +121,8 @@ const Index = () => {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: Camera, title: "Wedding Photography", desc: "Capturing every moment of your Lehi or Utah County wedding — ceremonies, receptions, and intimate elopements." },
-              { icon: Users, title: "Family Portraits in Utah County", desc: "Beautiful family photos and professional headshots at stunning locations across American Fork, Provo, and Orem." },
+              { icon: Camera, title: "Wedding Photography", desc: "Capturing every moment of your Salt Lake or Utah County wedding — ceremonies, receptions, and intimate elopements." },
+              { icon: Users, title: "Family Portraits in Northern Utah", desc: "Beautiful family photos and professional headshots at stunning locations across American Fork, Provo, and Orem." },
               { icon: Video, title: "Wedding & Event Video", desc: "Cinematic wedding films and event highlight reels for Salt Lake City, Lehi, and beyond." },
               { icon: Building2, title: "Commercial Video", desc: "Promotional videos for restaurants, gyms, service companies, and local Utah businesses." },
             ].map((service, i) => (
