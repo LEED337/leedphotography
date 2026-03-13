@@ -1,9 +1,17 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Mail, Instagram, Send, MapPin } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
+import usePageSEO from "@/hooks/usePageSEO";
 
 const Contact = () => {
+  usePageSEO({
+    title: "Contact | Book a Lehi Wedding Photographer",
+    description: "Book a wedding photographer or videographer in Lehi, Utah. Get in touch for weddings, family portraits, headshots, and commercial video across Utah County and Salt Lake City.",
+    canonical: "https://leedphotography.com/contact",
+  });
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -32,7 +40,7 @@ const Contact = () => {
             animate={{ opacity: 1, y: 0 }}
             className="font-display text-4xl md:text-6xl font-light text-foreground mb-4"
           >
-            Book a Session
+            Book Your Session
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -40,7 +48,7 @@ const Contact = () => {
             transition={{ delay: 0.2 }}
             className="font-body text-muted-foreground mb-4 max-w-2xl"
           >
-            Ready to book a Utah photographer or videographer? Get in touch for weddings, family portraits, headshots, events, or commercial video projects.
+            Ready to book a Lehi photographer or videographer? Get in touch for weddings, family portraits, headshots, events, or commercial video projects across Utah County and Salt Lake City.
           </motion.p>
           <motion.div
             initial={{ width: 0 }}
@@ -64,7 +72,7 @@ const Contact = () => {
               <div className="space-y-4">
                 <div className="flex items-center gap-3 text-foreground font-body">
                   <MapPin size={16} className="text-primary" />
-                  Based in Utah — available statewide &amp; for travel
+                  Based in Lehi, Utah — available statewide &amp; for travel
                 </div>
                 <a
                   href="mailto:followtheleed@gmail.com"
@@ -82,6 +90,19 @@ const Contact = () => {
                   <Instagram size={16} className="text-primary" />
                   @followtheleed
                 </a>
+              </div>
+
+              {/* Internal links */}
+              <div className="space-y-2 pt-4 border-t border-border">
+                <Link to="/pricing" className="block font-body text-sm text-primary underline underline-offset-4 hover:text-primary/80 transition-colors">
+                  View wedding photography &amp; video pricing
+                </Link>
+                <Link to="/photo" className="block font-body text-sm text-primary underline underline-offset-4 hover:text-primary/80 transition-colors">
+                  Browse the photography portfolio
+                </Link>
+                <Link to="/video" className="block font-body text-sm text-primary underline underline-offset-4 hover:text-primary/80 transition-colors">
+                  Watch sample wedding films &amp; videos
+                </Link>
               </div>
             </motion.div>
 

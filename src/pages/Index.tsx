@@ -2,9 +2,16 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Camera, Video, Users, Building2 } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
+import usePageSEO from "@/hooks/usePageSEO";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Index = () => {
+  usePageSEO({
+    title: "LeeD Photography | Lehi Wedding Photo & Video",
+    description: "Lehi-based wedding photographer and videographer serving Utah County and Salt Lake City. Authentic, cinematic photo and video for weddings, families, and brands.",
+    canonical: "https://leedphotography.com/",
+  });
+
   return (
     <PageTransition>
       {/* Hero */}
@@ -12,7 +19,7 @@ const Index = () => {
         <div className="absolute inset-0">
           <img
             src={heroBg}
-            alt="Utah landscape photography by Leed Photography"
+            alt="Golden hour landscape in Lehi, Utah — Leed Photography"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-background/60" />
@@ -25,9 +32,9 @@ const Index = () => {
             transition={{ duration: 1, delay: 0.2 }}
             className="font-display text-5xl md:text-8xl font-light tracking-tight text-foreground leading-none"
           >
-            Leed
+            Wedding Photography &amp; Video
             <br />
-            <span className="text-gradient font-semibold">Photography</span>
+            <span className="text-gradient font-semibold text-3xl md:text-5xl">in Lehi, Utah</span>
           </motion.h1>
 
           <motion.p
@@ -36,7 +43,7 @@ const Index = () => {
             transition={{ duration: 1, delay: 0.8 }}
             className="mt-6 font-body text-base md:text-lg text-foreground/80 tracking-wide max-w-lg"
           >
-            Utah's professional photographer &amp; videographer — weddings, portraits, events, and commercial video.
+            Lehi photographer &amp; videographer — weddings, portraits, events, and commercial video across Utah County and Salt Lake City.
           </motion.p>
 
           <motion.p
@@ -100,14 +107,14 @@ const Index = () => {
             viewport={{ once: true }}
             className="font-display text-3xl md:text-4xl font-light text-foreground mb-16"
           >
-            Photography & Videography in Utah
+            Photography &amp; Videography in Lehi &amp; Utah County
           </motion.h2>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: Camera, title: "Wedding Photography", desc: "Capturing every moment of your Utah wedding — ceremonies, receptions, and intimate elopements." },
-              { icon: Users, title: "Family & Portraits", desc: "Beautiful family photos and professional headshots in stunning Utah locations." },
-              { icon: Video, title: "Wedding & Event Video", desc: "Cinematic wedding films and event highlight reels that tell your story." },
+              { icon: Camera, title: "Wedding Photography", desc: "Capturing every moment of your Lehi or Utah County wedding — ceremonies, receptions, and intimate elopements." },
+              { icon: Users, title: "Family Portraits in Utah County", desc: "Beautiful family photos and professional headshots at stunning locations across American Fork, Provo, and Orem." },
+              { icon: Video, title: "Wedding & Event Video", desc: "Cinematic wedding films and event highlight reels for Salt Lake City, Lehi, and beyond." },
               { icon: Building2, title: "Commercial Video", desc: "Promotional videos for restaurants, gyms, service companies, and local Utah businesses." },
             ].map((service, i) => (
               <motion.div
@@ -124,6 +131,22 @@ const Index = () => {
               </motion.div>
             ))}
           </div>
+
+          {/* Internal links */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+            className="mt-12 flex flex-wrap gap-6"
+          >
+            <Link to="/pricing" className="font-body text-sm text-primary underline underline-offset-4 hover:text-primary/80 transition-colors">
+              View wedding photography &amp; video pricing
+            </Link>
+            <Link to="/video" className="font-body text-sm text-primary underline underline-offset-4 hover:text-primary/80 transition-colors">
+              See how I tell your story through film
+            </Link>
+          </motion.div>
         </div>
       </section>
 
@@ -141,10 +164,10 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 gap-4">
             {[
-              { to: "/photo", img: "/images/DSC03445-768x512.webp", title: "Weddings & Events", desc: "Ceremonies, receptions & celebrations" },
-              { to: "/photo", img: "/images/WithSky.jpg", title: "Landscapes", desc: "Utah wilderness & beyond" },
-              { to: "/photo", img: "/images/DSC05693-scaled.jpg", title: "Family & Portraits", desc: "Family sessions & professional headshots" },
-              { to: "/photo", img: "/images/DSC09970.webp", title: "Motion", desc: "Action, athletics & competition" },
+              { to: "/photo", img: "/images/DSC03445-768x512.webp", title: "Weddings & Events", desc: "Ceremonies, receptions & celebrations", alt: "Bride and groom at outdoor wedding ceremony in Lehi, Utah" },
+              { to: "/photo", img: "/images/WithSky.jpg", title: "Landscapes", desc: "Utah wilderness & beyond", alt: "Milky Way night sky over Utah desert landscape" },
+              { to: "/photo", img: "/images/DSC05693-scaled.jpg", title: "Family & Portraits", desc: "Family sessions & professional headshots", alt: "Family photography session in Utah County park" },
+              { to: "/photo", img: "/images/DSC09970.webp", title: "Motion", desc: "Action, athletics & competition", alt: "Action sports photography at Utah athletic event" },
             ].map((cat, i) => (
               <motion.div
                 key={cat.title}
@@ -156,7 +179,7 @@ const Index = () => {
                 <Link to={cat.to} className="group relative aspect-[4/3] overflow-hidden block">
                   <img
                     src={cat.img}
-                    alt={`${cat.title} photography in Utah by Leed Photography`}
+                    alt={cat.alt}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
                   />
@@ -189,7 +212,7 @@ const Index = () => {
             viewport={{ once: true }}
             className="font-display text-3xl md:text-4xl font-light text-foreground mb-6"
           >
-            Cinematic Video Production
+            Wedding Films &amp; Commercial Video
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
@@ -198,14 +221,14 @@ const Index = () => {
             transition={{ delay: 0.1 }}
             className="font-body text-muted-foreground mb-12 max-w-2xl"
           >
-            Wedding films, event coverage, restaurant promos, and commercial video for Utah businesses.
+            Cinematic wedding films, event coverage, restaurant promos, and commercial video for Salt Lake City and Utah County businesses.
           </motion.p>
 
           <div className="grid md:grid-cols-3 gap-4">
             {[
-              { title: "Wedding Films", desc: "Cinematic highlights of your big day", vimeoId: "1050354281" },
-              { title: "Commercial", desc: "Promo videos for businesses & brands", vimeoId: "372444561" },
-              { title: "Creative", desc: "Artistic & documentary projects", vimeoId: "1041178358" },
+              { title: "Wedding Films", desc: "Cinematic highlights of your big day", vimeoId: "1050354281", alt: "Wedding film highlight reel from Lehi, Utah wedding" },
+              { title: "Commercial", desc: "Promo videos for businesses & brands", vimeoId: "372444561", alt: "Commercial video production for Utah business" },
+              { title: "Creative", desc: "Artistic & documentary projects", vimeoId: "1041178358", alt: "Creative documentary videography project in Utah" },
             ].map((vid, i) => (
               <motion.div
                 key={vid.title}
@@ -222,7 +245,7 @@ const Index = () => {
                     frameBorder="0"
                     allow="autoplay; fullscreen; picture-in-picture"
                     allowFullScreen
-                    title={`${vid.title} — Utah videography by Leed Photography`}
+                    title={vid.alt}
                     loading="lazy"
                   />
                 </div>
@@ -272,7 +295,7 @@ const Index = () => {
             >
               <img
                 src="/images/DLDPort.JPG"
-                alt="Lee Denning — Utah photographer and videographer behind Leed Photography"
+                alt="Lee Denning — Lehi, Utah photographer and videographer"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
@@ -286,7 +309,7 @@ const Index = () => {
               className="space-y-6"
             >
               <h2 className="font-display text-3xl md:text-4xl font-light text-foreground">
-                Lee Denning
+                Meet Lee Denning
               </h2>
               <p className="font-display text-sm tracking-[0.15em] uppercase text-primary/80">
                 From VHS Tapes to High-Definition Memories
@@ -302,7 +325,7 @@ const Index = () => {
                   To me, every project—whether it's a luxury real estate listing or a family portrait—is an opportunity to sharpen my craft and tell a unique story.
                 </p>
                 <p className="text-foreground/90 italic">
-                  Based in the heart of Utah and always ready to pack a bag for a destination shoot. Let's create something timeless.
+                  Based in Lehi, Utah and always ready to pack a bag for a destination shoot. Let's create something timeless.
                 </p>
               </div>
               <Link
@@ -314,6 +337,29 @@ const Index = () => {
               </Link>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Service Area */}
+      <section className="py-16 px-6 md:px-12 border-t border-border">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-display text-2xl md:text-3xl font-light text-foreground mb-4"
+          >
+            Based in Lehi, Serving Northern Utah
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="font-body text-muted-foreground max-w-2xl mx-auto"
+          >
+            I'm a photographer and videographer based in Lehi, Utah, serving Utah County and Salt Lake County, including American Fork, Provo, Orem, Draper, Sandy, and Salt Lake City. Available for travel throughout the Wasatch Front and beyond.
+          </motion.p>
         </div>
       </section>
 
@@ -337,14 +383,14 @@ const Index = () => {
             transition={{ delay: 0.2 }}
             className="mt-6 font-body text-muted-foreground max-w-md mx-auto"
           >
-            Based in Utah, available for travel. Let's capture your next wedding, family session, or create stunning video content for your business.
+            Based in Lehi, available for travel. Let's capture your next wedding, family session, or create stunning video content for your business.
           </motion.p>
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            className="mt-10"
+            className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <Link
               to="/contact"
@@ -352,6 +398,12 @@ const Index = () => {
             >
               Get a Free Quote
               <ArrowRight size={16} />
+            </Link>
+            <Link
+              to="/photo"
+              className="font-body text-sm text-primary underline underline-offset-4 hover:text-primary/80 transition-colors"
+            >
+              Browse the photography portfolio
             </Link>
           </motion.div>
         </div>
