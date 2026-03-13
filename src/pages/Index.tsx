@@ -32,7 +32,7 @@ const Index = () => {
             transition={{ duration: 1, delay: 0.2 }}
             className="font-display text-5xl md:text-8xl font-light tracking-tight text-foreground leading-none"
           >
-            Leed
+            LeeD
             <br />
             <span className="text-gradient font-semibold">Photography</span>
           </motion.h1>
