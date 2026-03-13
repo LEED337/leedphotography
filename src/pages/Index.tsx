@@ -32,16 +32,25 @@ const Index = () => {
             transition={{ duration: 1, delay: 0.2 }}
             className="font-display text-5xl md:text-8xl font-light tracking-tight text-foreground leading-none"
           >
-            Wedding Photography &amp; Video
+            Leed
             <br />
-            <span className="text-gradient font-semibold text-3xl md:text-5xl">in Lehi, Utah</span>
+            <span className="text-gradient font-semibold">Photography</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.6 }}
+            className="mt-6 font-display text-xl md:text-3xl font-light text-foreground/90 tracking-wide"
+          >
+            Photography &amp; Video
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="mt-6 font-body text-base md:text-lg text-foreground/80 tracking-wide max-w-lg"
+            className="mt-4 font-body text-base md:text-lg text-foreground/80 tracking-wide max-w-lg"
           >
             Lehi photographer &amp; videographer — weddings, portraits, events, and commercial video across Utah County and Salt Lake City.
           </motion.p>
