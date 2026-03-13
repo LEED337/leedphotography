@@ -116,7 +116,7 @@ const Index = () => {
             viewport={{ once: true }}
             className="font-display text-3xl md:text-4xl font-light text-foreground mb-16"
           >
-            Photography &amp; Videography in Lehi &amp; Utah County
+            Photography &amp; Videography in Salt Lake &amp; Utah County
           </motion.h2>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
