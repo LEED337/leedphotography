@@ -349,6 +349,57 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Testimonials */}
+      <section className="py-24 px-6 md:px-12 border-t border-border">
+        <div className="max-w-7xl mx-auto">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="font-display text-xs tracking-[0.3em] uppercase text-primary mb-4"
+          >
+            Testimonials
+          </motion.p>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-display text-3xl md:text-4xl font-light text-foreground mb-16"
+          >
+            What Clients Are Saying
+          </motion.h2>
+
+          <div className="grid md:grid-cols-2 gap-12">
+            {[
+              {
+                quote: "I can't recommend Lee enough! His work is incredible. Capturing jiu jitsu photos is tough with the speed and constant movement, but he nailed it - every shot captured the energy and joy of the event. Super professional, punctual and responsive, plus the photos turned out amazing. Highly recommend for any sports photography or event!",
+                name: "Hannah",
+              },
+              {
+                quote: "Lee is an incredible photographer! He is professional, responsive and accommodating, and we always have a wonderful experience with him. Lee has an expert eye for angles and lighting, and his pictures never cease to amaze me! If you need a photoshoot done, Lee is my top recommendation!",
+                name: "Jordyn",
+              },
+            ].map((t, i) => (
+              <motion.blockquote
+                key={t.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.15 }}
+                className="space-y-6"
+              >
+                <p className="font-body text-sm md:text-base text-muted-foreground leading-relaxed italic">
+                  "{t.quote}"
+                </p>
+                <footer className="font-display text-sm tracking-[0.15em] uppercase text-primary/80">
+                  — {t.name}
+                </footer>
+              </motion.blockquote>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Service Area */}
       <section className="py-16 px-6 md:px-12 border-t border-border">
         <div className="max-w-7xl mx-auto text-center">
