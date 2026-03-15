@@ -67,6 +67,9 @@ const sections: PhotoSection[] = [
       { src: "/images/DSC00101.webp", alt: "High-speed action sports photo in Utah" },
       { src: "/images/DSC00152.webp", alt: "Athlete portrait during competition in Utah" },
       { src: "/images/DSC00292.webp", alt: "Sports event coverage photography in Lehi" },
+      { src: "/images/DSC02551.webp", alt: "Jiu jitsu grappling action photography in Utah" },
+      { src: "/images/DSC01964.webp", alt: "Brazilian jiu jitsu competition photography" },
+      { src: "/images/DSC02829.webp", alt: "No-gi jiu jitsu action sports photography in Utah" },
     ],
   },
 ];
