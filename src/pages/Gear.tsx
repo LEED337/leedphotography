@@ -56,7 +56,6 @@ const gearSections: GearSection[] = [
         name: "Sony 85mm F1.4 GM Lens",
         description: "Another classic for portraits. That bokeh though.",
         link: "https://amzn.to/4sPKZ4X",
-        badge: "Premium Pick",
         image: "/images/gear/sony85mm.jpg",
       },
       {
