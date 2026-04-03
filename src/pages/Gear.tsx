@@ -8,6 +8,7 @@ interface GearItem {
   description: string;
   link: string;
   badge?: string;
+  image?: string;
 }
 
 interface GearSection {
@@ -24,22 +25,26 @@ const gearSections: GearSection[] = [
         description: "The newest model in the Alpha 7 lineup — a powerhouse for both photo and video with AI-based autofocus and incredible low-light performance.",
         link: "https://amzn.to/4ckHEoK",
         badge: "Latest Model",
+        image: "/images/gear/a7v.jpg",
       },
       {
         name: "Sony Alpha 7 IV Full Frame",
         description: "My current workhorse. Reliable, versatile, and delivers stunning results in every shooting scenario.",
         link: "https://amzn.to/4toq5Kf",
         badge: "My Pick",
+        image: "/images/gear/a7iv.jpg",
       },
       {
         name: "Sony Alpha 7 III Full Frame",
         description: "A more affordable option that still produces amazing images. A fantastic entry point into full-frame mirrorless.",
         link: "https://amzn.to/41Gf8rA",
+        image: "/images/gear/a7iii.jpg",
       },
       {
         name: "Sony Alpha 6700 APS-C",
         description: "A great crop-sensor alternative if you want to save money while still getting outstanding image quality.",
         link: "https://amzn.to/3OfUMlW",
+        image: "/images/gear/a6700.jpg",
       },
     ],
   },
@@ -242,13 +247,24 @@ const Gear = () => {
                 transition={{ duration: 0.5, delay: iIdx * 0.08 }}
                 className="group relative rounded-lg border border-border bg-card p-6 hover:border-primary/40 transition-all duration-300 flex flex-col"
               >
+                {item.image && (
+                  <div className="mb-4 -mx-6 -mt-6 overflow-hidden rounded-t-lg bg-muted/30">
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="w-full h-48 object-contain p-4"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
+
                 {item.badge && (
-                  <span className="absolute top-4 right-4 text-xs font-medium bg-primary/15 text-primary px-2.5 py-1 rounded-full">
+                  <span className={`${item.image ? '' : 'absolute top-4 right-4 '}text-xs font-medium bg-primary/15 text-primary px-2.5 py-1 rounded-full inline-block mb-2`}>
                     {item.badge}
                   </span>
                 )}
 
-                <h3 className="font-display text-lg font-medium text-foreground pr-20 leading-snug">
+                <h3 className="font-display text-lg font-medium text-foreground leading-snug">
                   {item.name}
                 </h3>
 
