@@ -44,6 +44,43 @@ const gearSections: GearSection[] = [
     ],
   },
   {
+    title: "Lenses",
+    items: [
+      {
+        name: "Sony 55mm F1.8 FE ZA Full Frame Prime Lens",
+        description: "The nifty fifty...five. Perfect for all the portraits you could ever imagine taking.",
+        link: "https://amzn.to/4c8BO8P",
+        image: "/images/gear/sony55mm.jpg",
+      },
+      {
+        name: "Sony 85mm F1.4 GM Lens",
+        description: "Another classic for portraits. That bokeh though.",
+        link: "https://amzn.to/4sPKZ4X",
+        badge: "Premium Pick",
+        image: "/images/gear/sony85mm.jpg",
+      },
+      {
+        name: "Sony 70-200mm F2.8 GM OSS II Lens",
+        description: "Great for candids without getting too up close and personal.",
+        link: "https://amzn.to/4vafa8z",
+        image: "/images/gear/sony70200mm.jpg",
+      },
+      {
+        name: "Tamron 28-75mm F2.8 Di III VXD G2",
+        description: "The perfect all-arounder when you need to adjust zoom without swapping lenses every five seconds.",
+        link: "https://amzn.to/3NWHCdy",
+        badge: "My Pick",
+        image: "/images/gear/tamron2875mm.jpg",
+      },
+      {
+        name: "Rokinon AF 14mm F2.8 Ultra Wide Lens",
+        description: "Full frame and APS-C compatible. I have the older version, but you should get this one. Great for landscapes and astrophotography!",
+        link: "https://amzn.to/4cnrdYQ",
+        image: "/images/gear/rokinon14mm.jpg",
+      },
+    ],
+  },
+  {
     title: "Batteries & Grips",
     items: [
       {
