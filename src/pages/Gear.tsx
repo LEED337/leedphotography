@@ -191,11 +191,13 @@ const gearSections: GearSection[] = [
         name: "SmallRig HawkLock Quick Release Cage for Sony Alpha 7",
         description: "Ready to get serious about video? This cage adds mounting points and protection for professional rigging.",
         link: "https://amzn.to/4va4ruV",
+        image: "/images/gear/smallrighawklock.jpg",
       },
       {
         name: "Atomos Shinobi II 5.2\" HDMI Camera Monitor",
         description: "A sharp, bright external monitor so you can frame your shots without squinting at a tiny screen.",
         link: "https://amzn.to/4cn7hoX",
+        image: "/images/gear/atomosmonitor.jpg",
       },
     ],
   },
