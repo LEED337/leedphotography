@@ -8,6 +8,7 @@ interface GearItem {
   description: string;
   link: string;
   badge?: string;
+  image?: string;
 }
 
 interface GearSection {
