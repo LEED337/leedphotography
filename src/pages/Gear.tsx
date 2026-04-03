@@ -56,7 +56,6 @@ const gearSections: GearSection[] = [
         name: "Sony 85mm F1.4 GM Lens",
         description: "Another classic for portraits. That bokeh though.",
         link: "https://amzn.to/4sPKZ4X",
-        badge: "Premium Pick",
         image: "/images/gear/sony85mm.jpg",
       },
       {
@@ -69,7 +68,6 @@ const gearSections: GearSection[] = [
         name: "Tamron 28-75mm F2.8 Di III VXD G2",
         description: "The perfect all-arounder when you need to adjust zoom without swapping lenses every five seconds.",
         link: "https://amzn.to/3NWHCdy",
-        badge: "My Pick",
         image: "/images/gear/tamron2875mm.jpg",
       },
       {
