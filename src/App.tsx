@@ -11,6 +11,7 @@ import Photo from "./pages/Photo";
 import Video from "./pages/Video";
 import Contact from "./pages/Contact";
 import Pricing from "./pages/Pricing";
+import Gear from "./pages/Gear";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
