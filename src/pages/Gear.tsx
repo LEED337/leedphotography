@@ -247,13 +247,24 @@ const Gear = () => {
                 transition={{ duration: 0.5, delay: iIdx * 0.08 }}
                 className="group relative rounded-lg border border-border bg-card p-6 hover:border-primary/40 transition-all duration-300 flex flex-col"
               >
+                {item.image && (
+                  <div className="mb-4 -mx-6 -mt-6 overflow-hidden rounded-t-lg bg-muted/30">
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="w-full h-48 object-contain p-4"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
+
                 {item.badge && (
-                  <span className="absolute top-4 right-4 text-xs font-medium bg-primary/15 text-primary px-2.5 py-1 rounded-full">
+                  <span className={`${item.image ? '' : 'absolute top-4 right-4 '}text-xs font-medium bg-primary/15 text-primary px-2.5 py-1 rounded-full inline-block mb-2`}>
                     {item.badge}
                   </span>
                 )}
 
-                <h3 className="font-display text-lg font-medium text-foreground pr-20 leading-snug">
+                <h3 className="font-display text-lg font-medium text-foreground leading-snug">
                   {item.name}
                 </h3>
 
