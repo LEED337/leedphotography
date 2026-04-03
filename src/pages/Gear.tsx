@@ -35,12 +35,6 @@ const gearSections: GearSection[] = [
         image: "/images/gear/a7iv.jpg",
       },
       {
-        name: "Sony Alpha 7 III Full Frame",
-        description: "A more affordable option that still produces amazing images. A fantastic entry point into full-frame mirrorless.",
-        link: "https://amzn.to/41Gf8rA",
-        image: "/images/gear/a7iii.jpg",
-      },
-      {
         name: "Sony Alpha 6700 APS-C",
         description: "A great crop-sensor alternative if you want to save money while still getting outstanding image quality.",
         link: "https://amzn.to/3OfUMlW",
