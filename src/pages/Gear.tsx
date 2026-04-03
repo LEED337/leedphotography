@@ -68,7 +68,6 @@ const gearSections: GearSection[] = [
         name: "Tamron 28-75mm F2.8 Di III VXD G2",
         description: "The perfect all-arounder when you need to adjust zoom without swapping lenses every five seconds.",
         link: "https://amzn.to/3NWHCdy",
-        badge: "My Pick",
         image: "/images/gear/tamron2875mm.jpg",
       },
       {
