@@ -39,6 +39,7 @@ const gearSections: GearSection[] = [
         description: "A great crop-sensor alternative if you want to save money while still getting outstanding image quality.",
         link: "https://amzn.to/3OfUMlW",
         image: "/images/gear/a6700.jpg",
+        badge: "Budget – Smaller Sensor",
       },
     ],
   },
