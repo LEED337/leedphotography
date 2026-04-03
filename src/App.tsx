@@ -15,13 +15,14 @@ import Gear from "./pages/Gear";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
+const routerBasename = window.location.hostname.endsWith("github.io") ? "/leedphotography" : "/";
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename={routerBasename}>
         <Navigation />
         <AnimatePresence mode="wait">
           <Routes>
