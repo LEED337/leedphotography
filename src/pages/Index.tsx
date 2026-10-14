@@ -7,8 +7,8 @@ import heroBg from "@/assets/hero-bg.jpg";
 
 const Index = () => {
   usePageSEO({
-    title: "LeeD Photography | Lehi Wedding Photo & Video",
-    description: "Lehi-based wedding photographer and videographer serving Utah County and Salt Lake City. Authentic, cinematic photo and video for weddings, families, and brands.",
+    title: "LeeD Photography | Lehi Photographer & Videographer",
+    description: "Lehi-based photographer and videographer serving Salt Lake & Utah County — weddings, families, portraits, sports, and commercial video for brands, restaurants, and gyms.",
     canonical: "https://leedphotography.com/",
   });
 

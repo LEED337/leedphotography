@@ -7,7 +7,7 @@ import usePageSEO from "@/hooks/usePageSEO";
 
 const Contact = () => {
   usePageSEO({
-    title: "Contact | Book a Lehi Wedding Photographer",
+    title: "Contact | Book LeeD Photography in Utah",
     description: "Book a wedding photographer or videographer in Lehi, Utah. Get in touch for weddings, family portraits, headshots, and commercial video across Utah County and Salt Lake City.",
     canonical: "https://leedphotography.com/contact",
   });
