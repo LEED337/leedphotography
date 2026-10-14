@@ -183,7 +183,7 @@ const SectionHeading = ({
 
 const Pricing = () => {
   usePageSEO({
-    title: "Pricing | Lehi Wedding Photographer & Videographer",
+    title: "Pricing | Lehi Photographer & Videographer",
     description: "Transparent pricing for wedding photography, family portraits, wedding films, and commercial video in Lehi, Utah. Serving Utah County and Salt Lake City.",
     canonical: "https://leedphotography.com/pricing",
   });
